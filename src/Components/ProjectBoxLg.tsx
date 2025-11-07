@@ -1,10 +1,11 @@
 import { StackChip } from "./StackChip";
+import useEmblaCarousel from "embla-carousel-react";
 
 interface ProjectBoxLgProps {
   title: string;
   role: string;
   description: string;
-  imgs?: string[];
+  imgs: string[];
   stacks: string[];
   link?: string;
   github?: string;
@@ -19,10 +20,15 @@ export const ProjectBoxLg = ({
   link,
   github,
 }: ProjectBoxLgProps) => {
+
+  const [emblaRef] = useEmblaCarousel();
+
   return (
-    <div className="flex flex-col-reverse sm:flex-row gap-0 sm:gap-5 
+    <div
+      className="flex flex-col-reverse sm:flex-row gap-0 sm:gap-5 
       bg-bg2 border border-detail3 rounded-md
-      my-5 shadow-2xl">
+      my-5 shadow-2xl"
+    >
       <div className="flex flex-col flex-1 m-5">
         <span className="text-2xl font-bold">{title}</span>
         <span>{role}</span>
@@ -85,10 +91,16 @@ export const ProjectBoxLg = ({
         </div>
       </div>
 
-      <div className="flex-1 self-center">
-        {imgs?.map((img, i) => (
-          <img key={i} src={img} />
-        ))}
+      <div className="overflow-hidden flex-1 self-center" ref={emblaRef}>
+        <div className="flex flex-1">
+          {imgs.map((src, i) => (
+            <img
+              key={i}
+              src={src}
+              className="flex-[0_0_100%] w-full h-auto object-cover"
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ export const ProfessionalProjects = () => {
           "NextJS",
           "KnockoutJs",
         ]}
-        imgs={["./esferaHome.png"]}
+        imgs={["./esferaHome.png", "./esferaHome2.png"]}
       />
       <ProjectBoxLg
         title="ArmazemPB"
@@ -43,7 +43,7 @@ export const ProfessionalProjects = () => {
           "ReactJS",
           "KnockoutJs",
         ]}
-        imgs={["./armazemHome.png"]}
+        imgs={["./armazemHome.png", "./armazemHome2.png"]}
       />
       <ProjectBoxLg
         title="Reorganizar"
@@ -54,11 +54,9 @@ export const ProfessionalProjects = () => {
           sharing of personal thoughts. It supports different user roles (psychologist and patient), ensuring privacy 
           so that only the patient and their psychologist can access the records."
         stacks={["Typescript", "HTML", "Tailwind", "NextJS", "Firebase"]}
-        imgs={["./reorganizarHome.png"]}
+        imgs={["./reorganizarHome.png", "./reorganizarHome2.png"]}
       />
-      <div className="flex gap-5">
-
-      </div>
+      <div className="flex gap-5"></div>
     </section>
   );
 };

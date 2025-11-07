@@ -1,4 +1,5 @@
 import "./App.css";
+import { ContactArea } from "./Components/ContactArea";
 import { PersonalProjects } from "./Components/PersonalProjects";
 import { ProfessionalProjects } from "./Components/ProfessionalProjects";
 import { SkillsArea } from "./Components/SkillsArea";
@@ -10,6 +11,13 @@ function App() {
       <ProfessionalProjects />
       <PersonalProjects />
       <SkillsArea />
+      <ContactArea />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </div>
   );
 }

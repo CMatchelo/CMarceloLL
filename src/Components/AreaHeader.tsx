@@ -1,6 +1,6 @@
 interface AreaHeaderProps {
     title: string,
-    subtitle: string
+    subtitle?: string
 }
 
 export const AreaHeader = ({title, subtitle}: AreaHeaderProps) => {

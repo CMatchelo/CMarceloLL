@@ -18,7 +18,7 @@ export const PersonalProjects = () => {
         github="https://github.com/CMatchelo/manto-sagrado"
         description="A web platform for organizing and showcasing sports jersey collections, with detailed item records and sharable public profiles."
         stacks={["Typescript", "HTML", "Tailwind", "NextJS", "Firebase"]}
-        imgs={["./mantoSagradoHome.png"]}
+        imgs={["./mantoSagradoHome.png", "./mantoSagradoHome2.png", "./mantoSagradoHome3.png"]}
       />
       <div className="flex flex-row gap-5">
         <ProjectBoxSm
@@ -42,11 +42,11 @@ export const PersonalProjects = () => {
         <ProjectBoxSm
           title="ADRC Icasa Website"
           role="Creator & Developer"
-          link="https://manto-sagrado.vercel.app"
+          link="https://icasa-site.web.app"
           github="https://github.com/CMatchelo/icasa-site"
           description="Non-official fan website for Icasa, featuring match results, schedules, and league standings."
           stacks={["Javascript", "HTML", "CSS", "ReactJS", "Firebase"]}
-          imgs={["./mantoSagradoHome.png"]}
+          imgs={["./icasaHome.png"]}
         />
       </div>
     </section>
