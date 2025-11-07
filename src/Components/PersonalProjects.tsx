@@ -20,7 +20,7 @@ export const PersonalProjects = () => {
         stacks={["Typescript", "HTML", "Tailwind", "NextJS", "Firebase"]}
         imgs={["./mantoSagradoHome.png", "./mantoSagradoHome2.png", "./mantoSagradoHome3.png"]}
       />
-      <div className="flex flex-row gap-5">
+      <div className="flex flex-col sm:flex-row gap-5">
         <ProjectBoxSm
           title="Canllection"
           role="Creator & Developer"

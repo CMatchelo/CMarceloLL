@@ -1,5 +1,6 @@
 import "./App.css";
 import { ContactArea } from "./Components/ContactArea";
+import { InitialArea } from "./Components/InitialArea";
 import { PersonalProjects } from "./Components/PersonalProjects";
 import { ProfessionalProjects } from "./Components/ProfessionalProjects";
 import { SkillsArea } from "./Components/SkillsArea";
@@ -7,7 +8,7 @@ import { SkillsArea } from "./Components/SkillsArea";
 function App() {
   return (
     <div>
-      <h1 className="bg-bg1 text-detail1">Cicero Marcelo L. Leite</h1>
+      <InitialArea />
       <ProfessionalProjects />
       <PersonalProjects />
       <SkillsArea />

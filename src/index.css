@@ -10,6 +10,18 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+  color: #9B87F5;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
 h2 {
   font-size: 28px;
   font-weight: 600;

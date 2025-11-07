@@ -37,7 +37,7 @@ export const SkillsArea = () => {
         title="Tech Stack & Skills"
         subtitle="Technologies I use to build efficient, scalable, and user-focused solutions."
       />
-      <div className="flex flex-row gap-4 w-full mt-4">
+      <div className="flex flex-col sm:flex-row gap-4 w-full mt-4">
         <SkillBox title="Programming" skills={programming} />
         <SkillBox title="Frameworks" skills={frameworks} />
         <SkillBox title="Tools" skills={tools} />
