@@ -1,6 +1,6 @@
 import { StackChip } from "./StackChip";
 
-interface ProjectBoxLgProps {
+interface ProjectBoxSmProps {
   title: string;
   role: string;
   description: string;
@@ -10,7 +10,7 @@ interface ProjectBoxLgProps {
   github?: string;
 }
 
-export const ProjectBoxLg = ({
+export const ProjectBoxSm = ({
   title,
   role,
   description,
@@ -18,23 +18,30 @@ export const ProjectBoxLg = ({
   stacks,
   link,
   github,
-}: ProjectBoxLgProps) => {
+}: ProjectBoxSmProps) => {
   return (
-    <div className="flex flex-col-reverse sm:flex-row gap-0 sm:gap-5 
+    <div className="flex flex-col
       bg-bg2 border border-detail3 rounded-md
       my-5 shadow-2xl">
+        {/*Div Images*/}
+        <div className="flex justify-center items-start">
+        {imgs?.map((img, i) => (
+          <img key={i} src={img} />
+        ))}
+      </div>
+      {/*Div Content*/}
       <div className="flex flex-col flex-1 m-5">
         <span className="text-2xl font-bold">{title}</span>
         <span>{role}</span>
         <span className="mt-4">{description}</span>
-        <div className="flex flex-row flex-wrap gap-y-3 gap-x-1 mt-4">
+        <div className="flex flex-row flex-wrap gap-y-3 gap-x-1 my-4">
           {stacks.map((stack, i) => (
             <div key={i}>
               <StackChip stackName={stack} />
             </div>
           ))}
         </div>
-        <div className="mt-4 flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col gap-4 mt-auto">
           {link && (
             <a
               target="_blank"
@@ -85,11 +92,7 @@ export const ProjectBoxLg = ({
         </div>
       </div>
 
-      <div className="flex-1 self-center">
-        {imgs?.map((img, i) => (
-          <img key={i} src={img} />
-        ))}
-      </div>
+      
     </div>
   );
 };

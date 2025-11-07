@@ -3,7 +3,7 @@ import { ProjectBoxLg } from "./ProjectBoxLg";
 
 export const ProfessionalProjects = () => {
   return (
-    <div className="flex flex-col items-center">
+    <section className="flex flex-col flex-1 items-center mx-4 sm:mx-10">
       <AreaHeader
         title="Professional Projects"
         subtitle="Real-world projects built in professional environments, delivering
@@ -45,6 +45,20 @@ export const ProfessionalProjects = () => {
         ]}
         imgs={["./armazemHome.png"]}
       />
-    </div>
+      <ProjectBoxLg
+        title="Reorganizar"
+        role="Full Stack Developer"
+        link="https://www.reorganizar.com.br"
+        github="https://github.com/CMatchelo/mindlog"
+        description="A web platform designed for mental health professionals and patients, enabling the secure registration and 
+          sharing of personal thoughts. It supports different user roles (psychologist and patient), ensuring privacy 
+          so that only the patient and their psychologist can access the records."
+        stacks={["Typescript", "HTML", "Tailwind", "NextJS", "Firebase"]}
+        imgs={["./reorganizarHome.png"]}
+      />
+      <div className="flex gap-5">
+
+      </div>
+    </section>
   );
 };
