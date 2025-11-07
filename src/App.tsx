@@ -15,10 +15,6 @@ function App() {
       <ContactArea />
       <br/>
       <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
     </div>
   );
 }

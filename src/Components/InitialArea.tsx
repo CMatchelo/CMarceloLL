@@ -23,8 +23,8 @@ const InitialBtn = ({ title, link, children }: InitialBtnProps) => {
 
 export const InitialArea = () => {
   return (
-    <section
-      className="h-screen w-screen flex justify-center items-center
+    <div
+      className="h-screen w-full flex justify-center items-center
   bg-[url('./mainBg.png')] bg-cover bg-center bg-no-repeat"
     >
       <div className="flex flex-col sm:h-1/2 w-10/12 sm:w-1/2 gap-4">
@@ -35,9 +35,11 @@ export const InitialArea = () => {
             <span className="text-detail2 font-bold text-xl">
               I turn ideas into interactive web products.
             </span>
-            <br/>
+            <br />
             <p>
-                I’m a front-end developer dedicated to building interfaces that are clean, performant, and accessible. Always ensuring the user experience comes first.
+              I’m a front-end developer dedicated to building interfaces that
+              are clean, performant, and accessible. Always ensuring the user
+              experience comes first.
             </p>
           </div>
         </div>
@@ -98,6 +100,30 @@ export const InitialArea = () => {
           </InitialBtn>
         </div>
       </div>
-    </section>
+      <div className="absolute bottom-4">
+        <button
+          onClick={() =>
+            document.getElementById("professional-projects")?.scrollIntoView({
+              behavior: "smooth",
+            })
+          }
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-10 cursor-pointer hover:translate-y-1 transition-transform"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
   );
 };

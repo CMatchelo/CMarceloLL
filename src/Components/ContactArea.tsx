@@ -28,7 +28,7 @@ const SocialBox = ({ title, link, children }: SocialBoxProps) => {
 
 export const ContactArea = () => {
   return (
-    <section className="flex flex-col items-center border-t border-detail3 pt-10 mt-10 mx-4 sm:mx-10">
+    <section className="border-t border-detail3 pt-10 mt-10">
       <AreaHeader
         title="Contact & About"
       />

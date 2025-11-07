@@ -4,7 +4,7 @@ import { ProjectBoxSm } from "./ProjectBoxSm";
 
 export const PersonalProjects = () => {
   return (
-    <section className="flex flex-col items-center mx-4 sm:mx-10">
+    <section>
       <AreaHeader
         title="Personal Projects"
         subtitle="Independent projects focused on learning, experimentation, and

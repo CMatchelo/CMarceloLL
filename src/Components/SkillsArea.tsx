@@ -32,7 +32,7 @@ export const SkillsArea = () => {
   const languages = ["Portuguese", "English", "French"];
 
   return (
-    <section className="flex flex-col items-center border-t border-detail3 pt-10 mt-10 mx-4 sm:mx-10">
+    <section className="border-t border-detail3 pt-10 mt-10">
       <AreaHeader
         title="Tech Stack & Skills"
         subtitle="Technologies I use to build efficient, scalable, and user-focused solutions."

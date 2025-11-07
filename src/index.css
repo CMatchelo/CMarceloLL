@@ -1,19 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @import "swiper/css";
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";
 
 body {
-  background: #0F0E17;
+  background: #0f0e17;
   color: #e9e9e9;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
   font-size: 48px;
   font-weight: 600;
-  color: #9B87F5;
+  color: #9b87f5;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: calc(var(--spacing) * 6);
+}
+
+@media (width >= 40rem /* 640px */) {
+  section {
+    margin-inline: calc(var(--spacing) * 20) /* 2.5rem = 40px */;
+  }
 }
 
 @media (max-width: 640px) {
@@ -25,7 +38,7 @@ h1 {
 h2 {
   font-size: 28px;
   font-weight: 600;
-  color: #9B87F5;
+  color: #9b87f5;
 }
 
 h3 {
@@ -33,10 +46,10 @@ h3 {
 }
 
 @theme {
-  --color-bg1: #0F0E17;
-  --color-bg2: #18161D;
-  --color-bg3: #322D48;
-  --color-detail1: #9B87F5;
-  --color-detail2: #8E7CE0;
+  --color-bg1: #0f0e17;
+  --color-bg2: #18161d;
+  --color-bg3: #322d48;
+  --color-detail1: #9b87f5;
+  --color-detail2: #8e7ce0;
   --color-detail3: #383159;
 }

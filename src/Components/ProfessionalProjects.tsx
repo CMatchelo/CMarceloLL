@@ -3,7 +3,7 @@ import { ProjectBoxLg } from "./ProjectBoxLg";
 
 export const ProfessionalProjects = () => {
   return (
-    <section className="flex flex-col flex-1 items-center mx-4 sm:mx-10">
+    <section id="professional-projects" className="flex-1">
       <AreaHeader
         title="Professional Projects"
         subtitle="Real-world projects built in professional environments, delivering
