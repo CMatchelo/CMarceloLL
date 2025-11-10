@@ -25,7 +25,7 @@ export const InitialArea = () => {
   return (
     <div
       className="h-screen w-full flex justify-center items-center
-  bg-[url('./mainBg.png')] bg-cover bg-center bg-no-repeat"
+  bg-[url('/mainBg.png')] bg-cover bg-center bg-no-repeat"
     >
       <div className="flex flex-col sm:h-1/2 w-10/12 sm:w-1/2 gap-4">
         <div className="flex flex-row">
