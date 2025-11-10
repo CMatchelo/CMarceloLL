@@ -20,24 +20,24 @@ export const PersonalProjects = () => {
         stacks={["Typescript", "HTML", "Tailwind", "NextJS", "Firebase"]}
         imgs={["./mantoSagradoHome.png", "./mantoSagradoHome2.png", "./mantoSagradoHome3.png"]}
       />
-      <div className="flex flex-col sm:flex-row gap-5">
+      <div className="flex flex-col md:flex-row gap-5">
         <ProjectBoxSm
           title="Canllection"
           role="Creator & Developer"
-          link="new-canllection.vercel.app/"
+          link="https://new-canllection.vercel.app/"
           github="https://github.com/CMatchelo/new_canllection"
           description="A platform for cataloging beverage can collections, with item details and shareable public profiles."
           stacks={["Typescript", "HTML", "Tailwind", "NextJS", "Firebase"]}
-          imgs={["./mantoSagradoHome.png"]}
+          imgs={["./canllectionHome.png"]}
         />
         <ProjectBoxSm
-          title="My Money Bot"
+          title="Minhas HQs"
           role="Creator & Developer"
-          link="https://manto-sagrado.vercel.app"
-          github="https://github.com/CMatchelo/manto-sagrado"
-          description="A Telegram bot that helps users log their daily expenses and automatically stores all records in a linked Google Sheets document for easy tracking and organization."
+          link="https://minhas-tex.web.app/auth"
+          github="https://github.com/CMatchelo/minhas-tex"
+          description="Web platform for managing comic book collections"
           stacks={["Python", "Google Apps Script"]}
-          imgs={["./mantoSagradoHome.png"]}
+          imgs={["./minhasHq.png"]}
         />
         <ProjectBoxSm
           title="ADRC Icasa Website"
