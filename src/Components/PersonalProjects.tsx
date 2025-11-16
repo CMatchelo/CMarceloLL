@@ -36,7 +36,7 @@ export const PersonalProjects = () => {
           link="https://minhas-tex.web.app/auth"
           github="https://github.com/CMatchelo/minhas-tex"
           description="Web platform for managing comic book collections"
-          stacks={["Python", "Google Apps Script"]}
+          stacks={["Typescript", "HTML", "Tailwind", "ReactJS", "Firebase"]}
           imgs={["./minhasHq.png"]}
         />
         <ProjectBoxSm
