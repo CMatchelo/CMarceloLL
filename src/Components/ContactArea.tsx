@@ -4,121 +4,102 @@ interface SocialBoxProps {
   title: string;
   link: string;
   children: React.ReactNode;
+  description?: string;
 }
 
-const SocialBox = ({ title, link, children }: SocialBoxProps) => {
+const SocialBox = ({ title, link, children, description }: SocialBoxProps) => {
   return (
-    <>
-      <a
-        target="_blank"
-        href={link}
-        className="
-            flex gap-2
-            p-4 border border-detail3 
-            cursor-pointer
-            hover:border-detail1
-            transition"
-      >
+    <a
+      target="_blank"
+      href={link}
+      className="reveal group flex items-center gap-4 p-5
+        bg-bg2 border border-detail3 rounded-xl
+        hover:border-detail1 hover:bg-bg3
+        transition-all duration-200 cursor-pointer"
+    >
+      <div className="shrink-0 p-2.5 rounded-lg bg-detail3
+        group-hover:bg-detail1 group-hover:text-bg1
+        transition-colors duration-200 text-detail1">
         {children}
-        {title}
-      </a>
-    </>
+      </div>
+      <div className="flex flex-col">
+        <span className="font-semibold text-sm">{title}</span>
+        {description && (
+          <span className="text-xs text-[#b0aac8] mt-0.5">{description}</span>
+        )}
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="size-4 ml-auto opacity-0 group-hover:opacity-60 transition-opacity -translate-x-1 group-hover:translate-x-0 duration-200"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+      </svg>
+    </a>
   );
 };
 
 export const ContactArea = () => {
   return (
-    <section className="border-t border-detail3 pt-10 mt-10">
-      <AreaHeader
-        title="Contact & About"
-      />
-      <div className="flex flex-col gap-5 mt-4 w-full">
-        <span className="text-lg">
-          Front-end developer with solid experience in designing and maintaining
-          e-commerce platforms and systems built with React and Next.js. Proven
-          track record in developing features, resolving bugs, and ensuring
-          system stability using{" "}
-          <strong>
-            React, Next.js, KnockoutJS, HTML, CSS, JavaScript, and Oracle
-            Commerce Cloud
+    <section className="border-t border-detail3 pt-14 mt-14 pb-16">
+      <AreaHeader title="Contact & About" />
+
+      <div className="flex flex-col gap-6 mt-8 w-full max-w-3xl">
+        <p className="text-sm text-[#b0aac8] leading-relaxed">
+          Front-end developer with solid experience in designing and maintaining e-commerce
+          platforms and systems built with React and Next.js. Proven track record in developing
+          features, resolving bugs, and ensuring system stability using{" "}
+          <strong className="text-[#e9e9e9] font-semibold">
+            React, Next.js, KnockoutJS, HTML, CSS, JavaScript, and Oracle Commerce Cloud
           </strong>
-          . Experienced in technical leadership, interface development, and
-          delivering user-centered solutions with a strong focus on usability
-          and measurable business outcomes.
-          <br />
-          <br />
-          Feel free to reach out for opportunities, collaborations, or just to
-          say hello.
-        </span>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          . Experienced in technical leadership, interface development, and delivering
+          user-centered solutions with a strong focus on usability and measurable business outcomes.
+        </p>
+        <p className="text-sm text-[#b0aac8] leading-relaxed">
+          Feel free to reach out for opportunities, collaborations, or just to say hello.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
           <SocialBox
-            title="Linkedin"
+            title="LinkedIn"
             link="https://www.linkedin.com/in/ciceromarceloll/"
+            description="ciceromarceloll"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
             </svg>
           </SocialBox>
 
-          <SocialBox title="Email" link="mailto:cicero.marcelo.ll@gmail.com">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
-              />
+          <SocialBox
+            title="Email"
+            link="mailto:cicero.marcelo.ll@gmail.com"
+            description="cicero.marcelo.ll@gmail.com"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
             </svg>
           </SocialBox>
 
-          <SocialBox title="Github" link="https://github.com/CMatchelo">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
-              />
+          <SocialBox
+            title="GitHub"
+            link="https://github.com/CMatchelo"
+            description="CMatchelo"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
             </svg>
           </SocialBox>
 
-          <SocialBox title="Curriculum" link="https://drive.google.com/file/d/1VBx4j7zrFJPU21PNrCpvhuVhbCZ56w7c/view?usp=drive_link">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
-              />
+          <SocialBox
+            title="Curriculum"
+            link="https://drive.google.com/file/d/1VBx4j7zrFJPU21PNrCpvhuVhbCZ56w7c/view?usp=drive_link"
+            description="Download PDF"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
             </svg>
           </SocialBox>
         </div>
